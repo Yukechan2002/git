@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button, Container, ButtonAlternatives } from '../../styles/styles'
-import { AboutContainer } from './styles'
-import { ArrowRight, TelegramLogo } from 'phosphor-react'
+import Image from "next/image";
+import Link from "next/link";
+import { Button, Container, ButtonAlternatives } from "../../styles/styles";
+import { AboutContainer } from "./styles";
+import { ArrowRight, TelegramLogo } from "phosphor-react";
 
 export function About() {
   return (
@@ -14,39 +14,33 @@ export function About() {
             height={500}
             className="AboutImg"
             src="/about.svg"
-            alt="Imagem de perfil"
+            alt="Profile Image"
           />
         </div>
 
         <div className="aboutContent">
           <div className="aboutDescription">
-            <h2>Deixe-me apresentar</h2>
+            <h2>Let me introduce myself</h2>
             <p>
-              Sou um desenvolvedor front-end apaixonado por projetar e
-              codificar. Minha especialidade é a criação de interfaces e
-              funcionalidades para aplicativos da web usando React.js e Next.js.
+              I am a front-end developer passionate about designing and coding.
+              My specialty is creating interfaces and functionalities for web
+              applications using MERN Stack.
               <br />
-              Você pode conhecer mais sobre o meu perfil e o meu trabalho
-              navegando pelo website.
+              You can learn more about my profile and my work by browsing the
+              website.
             </p>
 
-            <strong>
-              P.S. este site é código aberto e está disponível no{' '}
-              <Link href={'https://github.com/EvanderInacio/Portfolio'}>
-                <a target='_blank'>Github</a>
-              </Link>
-            </strong>
           </div>
 
-          <div className='aboutButton'>
-            <Link href={'/contact'}>
+          <div className="aboutButton">
+            <Link href={"/contact"}>
               <a>
                 <Button>
-                  Entre em contato
+                  Get in touch
                   <TelegramLogo
                     style={{
-                      marginBottom: '-0.1rem',
-                      marginLeft: '0.2rem',
+                      marginBottom: "-0.1rem",
+                      marginLeft: "0.2rem",
                     }}
                     size={16}
                     weight="bold"
@@ -54,14 +48,14 @@ export function About() {
                 </Button>
               </a>
             </Link>
-            <Link href={'/about'}>
+            <Link href={"/about"}>
               <a>
                 <ButtonAlternatives>
-                  Ler mais
+                  Read more
                   <ArrowRight
                     style={{
-                      marginBottom: '-0.1rem',
-                      marginLeft: '0.2rem'
+                      marginBottom: "-0.1rem",
+                      marginLeft: "0.2rem",
                     }}
                     weight="bold"
                     size={16}
@@ -73,5 +67,5 @@ export function About() {
         </div>
       </AboutContainer>
     </Container>
-  )
+  );
 }

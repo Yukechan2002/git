@@ -1,51 +1,53 @@
-import { FormEvent, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { sendContactMail } from '../../services/sendMail'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import toast from 'react-hot-toast'
-import { ButtonSecondary } from '../../styles/styles'
-import { FormContent } from './styles'
-import { At, ChatText, TelegramLogo, User } from 'phosphor-react'
+import { FormEvent, useState } from "react";
+import { useForm } from "react-hook-form";
+import { sendContactMail } from "../../services/sendMail";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
+import { ButtonSecondary } from "../../styles/styles";
+import { FormContent } from "./styles";
+import { At, ChatText, TelegramLogo, User } from "phosphor-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
   email: z.string().email(),
-  message: z.string().min(2).max(1000)
-})
+  message: z.string().min(2).max(1000),
+});
 
-type ContactFormData = z.infer<typeof contactFormSchema>
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export function Form() {
   const { register, reset } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema)
-  })
+    resolver: zodResolver(contactFormSchema),
+  });
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const onSubmits = async (event: FormEvent) => {
-    event.preventDefault()
-    
+  const onSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+
     try {
-      await sendContactMail(name, email, message)
-      toast.success('Mensagem enviada com sucesso!')
-      setName('')
-      setEmail('')
-      setMessage('')
-      reset()
+      await sendContactMail(name, email, message);
+      toast.success("Message sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+      reset();
     } catch (error) {
-      toast.error('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
+      toast.error(
+        "An error occurred while sending the message. Please try again."
+      );
     }
-  }
+  };
 
   return (
-    <FormContent onSubmit={onSubmits}>
+    <FormContent onSubmit={onSubmit}>
       <div className="input-group">
         <input
           type="text"
-          {...register('name')}
+          {...register("name")}
           onChange={({ target }) => setName(target.value)}
           name="name"
           id="name"
@@ -55,7 +57,7 @@ export function Form() {
           className="input"
         />
         <label htmlFor="name" className="user-label">
-          Nome{' '}
+          Name{" "}
           <span>
             <User size={15} weight="bold" />
           </span>
@@ -65,7 +67,7 @@ export function Form() {
       <div className="input-group">
         <input
           type="email"
-          {...register('email')}
+          {...register("email")}
           onChange={({ target }) => setEmail(target.value)}
           required
           name="email"
@@ -75,7 +77,7 @@ export function Form() {
           className="input"
         />
         <label htmlFor="email" className="user-label">
-          Email{' '}
+          Email{" "}
           <span>
             <At size={15} weight="bold" />
           </span>
@@ -84,17 +86,17 @@ export function Form() {
 
       <div className="input-group">
         <textarea
-          {...register('message')}
+          {...register("message")}
           onChange={({ target }) => setMessage(target.value)}
-          name="description"
-          id="description"
-          autoComplete="description"
+          name="message"
+          id="message"
+          autoComplete="message"
           placeholder=" "
           required
           className="input"
         ></textarea>
-        <label htmlFor="description" className="user-label">
-          Mensagem{' '}
+        <label htmlFor="message" className="user-label">
+          Message{" "}
           <span>
             <ChatText size={15} weight="bold" />
           </span>
@@ -102,8 +104,8 @@ export function Form() {
       </div>
 
       <ButtonSecondary type="submit">
-        Enviar <TelegramLogo size={15} weight="bold" />{' '}
+        Send <TelegramLogo size={15} weight="bold" />{" "}
       </ButtonSecondary>
     </FormContent>
-  )
+  );
 }

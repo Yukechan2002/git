@@ -1,22 +1,22 @@
-import { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { HeaderContainer, MobileIcon, NavMenu, Icons } from './styles'
-import { List, X } from 'phosphor-react'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa'
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { HeaderContainer, MobileIcon, NavMenu, Icons } from "./styles";
+import { List, X } from "phosphor-react";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export function Header() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   return (
-    <HeaderContainer style={{ position: 'fixed' }}>
+    <HeaderContainer style={{ position: "fixed" }}>
       <div className="mobile-content">
-        <Link href={'/'}>
+        <Link href={"/"}>
           <a>
             <div className="logo">
               <Image
@@ -28,12 +28,12 @@ export function Header() {
               />
             </div>
 
-            {'Evander'.split('').map((letter, index) => {
+            {"Yukesh".split("").map((letter, index) => {
               return (
                 <span key={index} className="logo-name">
                   {letter}
                 </span>
-              )
+              );
             })}
           </a>
         </Link>
@@ -50,7 +50,7 @@ export function Header() {
       <NavMenu onClick={handleOpen} open={open}>
         <ul>
           <li>
-            <Link href={'/'}>
+            <Link href={"/"}>
               <a>
                 <span>Home</span>
               </a>
@@ -58,31 +58,31 @@ export function Header() {
           </li>
 
           <li>
-            <Link href={'/about'}>
+            <Link href={"/about"}>
               <a>
-                <span>Sobre</span>
+                <span>About</span>
               </a>
             </Link>
           </li>
 
           <li>
-            <Link href={'/experience'}>
+            <Link href={"/experience"}>
               <a>
-                <span>Experiência</span>
+                <span>Experience</span>
               </a>
             </Link>
           </li>
 
           <li>
-            <Link href={'/projects'}>
+            <Link href={"/projects"}>
               <a>
-                <span>Projetos</span>
+                <span>Projects</span>
               </a>
             </Link>
           </li>
 
           <li>
-            <Link href={'/resume'}>
+            <Link href={"/resume"}>
               <a>
                 <span>Resume</span>
               </a>
@@ -90,35 +90,32 @@ export function Header() {
           </li>
 
           <li>
-            <Link href={'/contact'}>
+            <Link href={"/contact"}>
               <a>
-                <span>Contato</span>
+                <span>Contact</span>
               </a>
             </Link>
           </li>
         </ul>
 
         <Icons>
-          <Link href={'https://github.com/EvanderInacio'}>
-            <a target="_blank" aria-label="Link para o Github">
+          <Link href={"https://github.com/EvanderInacio"}>
+            <a target="_blank" aria-label="Link to Github">
               <FiGithub />
             </a>
           </Link>
-          <Link href={'https://www.linkedin.com/in/evander-inacio/'}>
-            <a target="_blank" aria-label="Link para o Linkedin">
+          <Link href={"https://www.linkedin.com/in/evander-inacio/"}>
+            <a target="_blank" aria-label="Link to Linkedin">
               <FiLinkedin />
             </a>
           </Link>
-          <Link href={'https://api.whatsapp.com/send?phone=5511995085916'}>
-            <a
-              target="_blank"
-              aria-label="Link para entrar em contato via whatsapp"
-            >
+          <Link href={"https://api.whatsapp.com/send?phone=5511995085916"}>
+            <a target="_blank" aria-label="Link to contact via Whatsapp">
               <FaWhatsapp />
             </a>
           </Link>
         </Icons>
       </NavMenu>
     </HeaderContainer>
-  )
+  );
 }
