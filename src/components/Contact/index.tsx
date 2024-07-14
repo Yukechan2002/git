@@ -13,7 +13,7 @@ export function Contact() {
         <p>../contact</p>
         Contact
         <span>
-          <Envelope /> Contato
+          <Envelope /> Contact
         </span>
       </Title>
       <Description>

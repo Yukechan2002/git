@@ -22,7 +22,7 @@ export function About() {
           <div className="aboutDescription">
             <h2>Let me introduce myself</h2>
             <p>
-              I am a front-end developer passionate about designing and coding.
+              I am a Full stack developer passionate about designing and coding.
               My specialty is creating interfaces and functionalities for web
               applications using MERN Stack.
               <br />

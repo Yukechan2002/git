@@ -99,17 +99,17 @@ export function Header() {
         </ul>
 
         <Icons>
-          <Link href={"https://github.com/EvanderInacio"}>
+          <Link href={"https://github.com/Yukechan2002"}>
             <a target="_blank" aria-label="Link to Github">
               <FiGithub />
             </a>
           </Link>
-          <Link href={"https://www.linkedin.com/in/evander-inacio/"}>
+          <Link href={"https://www.linkedin.com/in/yukesh-chandran/"}>
             <a target="_blank" aria-label="Link to Linkedin">
               <FiLinkedin />
             </a>
           </Link>
-          <Link href={"https://api.whatsapp.com/send?phone=5511995085916"}>
+          <Link href={"https://api.whatsapp.com/send?phone=9500698294"}>
             <a target="_blank" aria-label="Link to contact via Whatsapp">
               <FaWhatsapp />
             </a>

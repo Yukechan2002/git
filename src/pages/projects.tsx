@@ -31,15 +31,15 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | Evander Inácio </title>
+        <title>Projects | Yukesh Chandran</title>
         <meta
           name="description"
-          content="Adoro codificar usando ferramentas como React, NextJS, Tailwind, Styled Components e muito mais! Aqui estão alguns dos meus projetos favoritos."
+          content="I love coding using tools like React, Node.js, Bootstrap,Tailwind CSS, Styled Components, and more! Here are some of my favorite projects."
         />
-        <meta property="og:title" content="Projects | Evander Inácio" />
+        <meta property="og:title" content="Projects | Yukesh Chandran" />
         <meta
           property="og:description"
-          content="Adoro codificar usando ferramentas como React, NextJS, Tailwind, Styled Components e muito mais! Aqui estão alguns dos meus projetos favoritos."
+          content="I love coding using tools like React, Next.js, Bootstrap,Tailwind CSS, Styled Components, and more! Here are some of my favorite projects."
         />
       </Head>
 
@@ -49,26 +49,26 @@ export default function Projects() {
       <T.Section>
         <T.Title>
           <p>../projects</p>
-          Projetos
+          Projects
           <span>
             <HiOutlineDesktopComputer /> Projects
           </span>
         </T.Title>
         <T.Description>
-          Aqui você poderá ver alguns dos trabalhos que eu desenvolvi. Navegue à
-          vontade e explore os projetos para ver como foram criados, as
-          tecnologias utilizadas e as funcionalidades implementadas.
+          Here you can view some of the projects I've developed. Feel free to
+          browse and explore the projects to see how they were built, the
+          technologies used, and the features implemented.
         </T.Description>
 
         <S.ProjectsContainer>
           <S.ProjectsContent>
             <div className="search">
-              <p>Pesquise pelo nome do projeto</p>
+              <p>Search by project name</p>
 
               <div className="input">
                 <input
                   type="text"
-                  placeholder="Pesquisar..."
+                  placeholder="Search..."
                   value={query}
                   onChange={handleChange}
                 />
@@ -77,10 +77,10 @@ export default function Projects() {
             </div>
 
             {!projectFilter.length && (
-              <h3 className="not-found">Projeto não encontrado 🙁</h3>
+              <h3 className="not-found">Project not found 🙁</h3>
             )}
 
-            {projectFilter.map(project => {
+            {projectFilter.map((project) => {
               return (
                 <>
                   <div className="border" key={project.id} />
@@ -99,7 +99,7 @@ export default function Projects() {
                         <Image
                           width={20}
                           height={20}
-                          src={'/icon.svg'}
+                          src={"/icon.svg"}
                           alt={project.title}
                         />
                         <h2>{project.title}</h2>
@@ -108,18 +108,18 @@ export default function Projects() {
                         <p>{project.description}</p>
 
                         <div className="tags">
-                          {project.tags.map(tag => {
-                            return <span key={tag.name}>{tag.name}</span>
+                          {project.tags.map((tag) => {
+                            return <span key={tag.name}>{tag.name}</span>;
                           })}
                         </div>
                       </div>
                       <Link href={`/project/${project.url}`}>
                         <a>
                           <T.ButtonAlternatives>
-                            Ver projeto
+                            View project
                             <ArrowRight
                               style={{
-                                marginBottom: '-0.1rem'
+                                marginBottom: "-0.1rem",
                               }}
                               weight="bold"
                               size={16}
@@ -130,17 +130,17 @@ export default function Projects() {
                     </div>
                   </S.ProjectsItem>
                 </>
-              )
+              );
             })}
 
             <p className="github">
-              Ei, ei, ei... Tenho ainda mais no{' '}
+              Hey, I've got even more on{" "}
               <a
-                href="https://github.com/EvanderInacio"
+                href="https://github.com/Yukechan2002"
                 target="_blank"
                 rel="noreferrer"
               >
-                meu GitHub{' '}
+                my GitHub{" "}
               </a>
               !
             </p>
@@ -149,5 +149,5 @@ export default function Projects() {
       </T.Section>
       <Footer />
     </>
-  )
+  );
 }

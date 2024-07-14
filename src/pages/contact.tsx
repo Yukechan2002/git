@@ -1,23 +1,23 @@
-import Head from 'next/head'
-import { Contact } from '../components/Contact'
-import { Footer } from '../components/Footer'
-import { Header } from '../components/Header'
-import { Links } from '../components/Links'
-import { ScrollTop } from '../components/ScrollTop'
+import Head from "next/head";
+import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { Links } from "../components/Links";
+import { ScrollTop } from "../components/ScrollTop";
 
 export default function Contacts() {
   return (
     <>
       <Head>
-        <title>Contact | Evander Inácio </title>
+        <title>Contact | Yukesh Chandran </title>
         <meta
           name="description"
-          content="Sinta-se à vontade para entrar em contato e vamos conversar sobre como podemos trabalhar juntos."
+          content="Feel free to get in touch and let's discuss how we can work together."
         />
-        <meta property="og:title" content="Contact | Evander Inácio" />
+        <meta property="og:title" content="Contact | Yukesh Chandran" />
         <meta
           property="og:description"
-          content="Sinta-se à vontade para entrar em contato e vamos conversar sobre como podemos trabalhar juntos."
+          content="Feel free to get in touch and let's discuss how we can work together."
         />
       </Head>
 
@@ -27,5 +27,5 @@ export default function Contacts() {
       <Contact />
       <Footer />
     </>
-  )
+  );
 }

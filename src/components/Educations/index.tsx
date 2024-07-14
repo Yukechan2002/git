@@ -1,19 +1,19 @@
-/* eslint-disable @next/next/no-img-element */ 
-import Image from 'next/image'
-import Link from 'next/link'
-import educations from '../../data/educations'
-import certificates from '../../data/certificates'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
-import { Title } from '../../styles/styles'
-import * as S from './styles'
-import { GraduationCap } from 'phosphor-react'
+/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+import Link from "next/link";
+import educations from "../../data/educations";
+import certificates from "../../data/certificates";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import { Title } from "../../styles/styles";
+import * as S from "./styles";
+import { GraduationCap } from "phosphor-react";
 
 export function Educations() {
   return (
     <S.ContainerEducation>
       <Title>
-        Educação
+        Education
         <span>
           <GraduationCap /> Education
         </span>
@@ -21,13 +21,13 @@ export function Educations() {
       <S.EducationContent>
         <S.EducationList>
           {educations &&
-            educations.map(education => {
+            educations.map((education) => {
               return (
                 <S.List key={education.id}>
                   <S.ListImage>
                     <img src={education.logo} alt={education.subTitle} />
                     <p>
-                      Nível: <span>{education.level} </span>
+                      Level: <span>{education.level} </span>
                     </p>
                     <p>
                       Status: <span>{education.status}</span>
@@ -37,16 +37,14 @@ export function Educations() {
                   <S.ListContent>
                     <h2>{education.title}</h2>
                     <h3>
-                      <Link href={education.link} >
-                        <a target="_blank">
-                          {education.subTitle}
-                        </a>
+                      <Link href={education.link}>
+                        <a target="_blank">{education.subTitle}</a>
                       </Link>
                     </h3>
                     <p>{education.description}</p>
                   </S.ListContent>
                 </S.List>
-              )
+              );
             })}
         </S.EducationList>
 
@@ -54,7 +52,7 @@ export function Educations() {
           <img
             className="education-logo"
             src="/education/education.svg"
-            alt="menino no computador"
+            alt="boy on computer"
           />
 
           <Carousel
@@ -66,7 +64,7 @@ export function Educations() {
             interval={1500}
           >
             {certificates &&
-              certificates.map(certificate => {
+              certificates.map((certificate) => {
                 return (
                   <Image
                     width={500}
@@ -76,11 +74,11 @@ export function Educations() {
                     src={certificate.image}
                     alt={certificate.name}
                   />
-                  )
+                );
               })}
           </Carousel>
         </S.EducationImage>
       </S.EducationContent>
     </S.ContainerEducation>
-  )
+  );
 }

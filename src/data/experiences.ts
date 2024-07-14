@@ -1,40 +1,40 @@
 const works = [
   {
     id: 1,
-    img: '/experience/work.svg',
-    title: 'Freelancer',
-    subTitle: 'Desenvolvedor Front-end',
-    office: 'Freelancer',
+    img: "/experience/y.svg",
+    title: "Freelancer",
+    subTitle: "Full Stack Developer",
+    office: "Freelancer",
     description:
-      'Atuo como Desenvolvedor Front-end freelancer com paixão por criar experiências digitais incríveis e funcionais.',
+      "I work as a freelance Full Stack Developer with a passion for creating amazing and functional digital experiences.",
     tags: [
-      { name: 'Html', icon: '/skills/html.svg' },
-      { name: 'Css', icon: '/skills/css.svg' },
-      { name: 'JavaScript', icon: '/skills/javascript.svg' },
-      { name: 'TypeScript', icon: '/skills/typescript.svg' },
-      { name: 'React JS', icon: '/skills/react.svg' },
-      { name: 'Next JS', icon: '/skills/next-js.svg' }
+      { name: "Html", icon: "/skills/html.svg" },
+      { name: "Css", icon: "/skills/css.svg" },
+      { name: "JavaScript", icon: "/skills/javascript.svg" },
+      { name: "MongoDb", icon: "/skills/mongodb.svg" },
+      { name: "React JS", icon: "/skills/react.svg" },
+      { name: "Node JS", icon: "/skills/nodejs.svg" },
     ],
-    date: 'Out 2022 - Presente'
+    date: "July 2024 - Present",
   },
   {
     id: 2,
-    img: '/experience/logo-ultronia.webp',
-    title: 'Ultronia',
-    subTitle: 'Desenvolvedor Front-end',
-    office: 'Freelancer',
+    img: "/experience/drdo.png",
+    title: "DRDO",
+    subTitle: "Intern",
+    office: "ADE-DRDO Bengaluru",
     description:
-      'Na Ultronia, fui responsável pelo desenvolvimento Front-End. Sendo responsável pelo desenvolvimento e manutenção de aplicações utilizando ReactJS, JavaScript e Material UI. Trabalhei em colaboração com a equipe de desenvolvimento back-end, para integrar componentes front-end e back-end de nossas aplicações.',
+      "At DRDO, I was responsible for Front-end development. I developed and maintained applications using ReactJS, JavaScript, and Material UI. I worked closely with the backend development team to integrate front-end and back-end components of our applications.",
     tags: [
-      { name: 'Html', icon: '/skills/html.svg' },
-      { name: 'Css', icon: '/skills/css.svg' },
-      { name: 'JavaScript', icon: '/skills/javascript.svg' },
-      { name: 'TypeScript', icon: '/skills/typescript.svg' },
-      { name: 'React JS', icon: '/skills/react.svg' },
-      { name: 'MaterialUL', icon: '/skills/material-ui.svg' }
+      { name: "Html", icon: "/skills/html.svg" },
+      { name: "Css", icon: "/skills/css.svg" },
+      { name: "JavaScript", icon: "/skills/javascript.svg" },
+      { name: "TypeScript", icon: "/skills/typescript.svg" },
+      { name: "React JS", icon: "/skills/react.svg" },
+      { name: "MaterialUI", icon: "/skills/material-ui.svg" },
     ],
-    date: 'Fev 2023 - Jul 2023'
+    date: "Feb 2023 - Jul 2023",
   },
-]
+];
 
-export default works
+export default works;

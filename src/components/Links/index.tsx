@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Icons } from './styles'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa'
+
 
 export function Links() {
   return (

@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import styled from 'styled-components'
-import { ArrowLeft } from 'phosphor-react'
-import { ButtonAlt } from '../styles/styles'
+import Head from "next/head";
+import Link from "next/link";
+import styled from "styled-components";
+import { ArrowLeft } from "phosphor-react";
+import { ButtonAlt } from "../styles/styles";
 
 const Styles404 = styled.div`
   display: flex;
@@ -29,11 +29,11 @@ const Styles404 = styled.div`
       width: 40rem;
     }
   }
-`
+`;
 
 const Content = styled.div`
   span {
-    color: ${props => props.theme.textSecondary};
+    color: ${(props) => props.theme.textSecondary};
     margin-bottom: 1rem;
     font-size: small;
 
@@ -47,7 +47,7 @@ const Content = styled.div`
   }
 
   h1 {
-    color: ${props => props.theme.firstColor};
+    color: ${(props) => props.theme.firstColor};
     margin-bottom: 2rem;
     font-size: 2rem;
 
@@ -59,38 +59,35 @@ const Content = styled.div`
       font-size: 3rem;
     }
   }
-`
+`;
 
 export default function Error() {
   return (
     <>
       <Head>
         <title>404</title>
-        <meta name="description" content="Ei! Parece que você está perdido" />
+        <meta name="description" content="Hey! Looks like you're lost" />
         <meta property="og:title" content="404" />
-        <meta
-          property="og:description"
-          content="Ei! Parece que você está perdido"
-        />
+        <meta property="og:description" content="Hey! Looks like you're lost" />
       </Head>
-      
+
       <Styles404>
         <img src="/vectors/404.svg" alt="404" />
 
         <Content>
-          <span>Ei! Parece que você está perdido :(</span>
+          <span>Hey! Looks like you're lost :(</span>
           <h1>
-            {' '}
-            404 <br /> Pagina não encontrada
+            {" "}
+            404 <br /> Page Not Found
           </h1>
-          <Link href={'/'}>
+          <Link href={"/"}>
             <ButtonAlt>
               <ArrowLeft weight="bold" size={18} />
-              Voltar
+              Back
             </ButtonAlt>
           </Link>
         </Content>
       </Styles404>
     </>
-  )
+  );
 }

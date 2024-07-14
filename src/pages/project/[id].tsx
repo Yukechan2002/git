@@ -1,32 +1,42 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { GetStaticProps, GetStaticPaths } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Project } from '../../types/Project'
-import projects from '../../data/projects'
+import { GetStaticProps, GetStaticPaths } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import { Project } from "../../types/Project";
+import projects from "../../data/projects";
 
-import ReactPlayer from 'react-player'
-import { Footer } from '../../components/Footer'
-import { AllProjects } from '../../components/Projects/Github'
+import ReactPlayer from "react-player";
+import { Footer } from "../../components/Footer";
+import { AllProjects } from "../../components/Projects/Github";
 
-import * as S from '../../styles/project'
-import { ButtonAlt, ButtonSecondary, Title, Description } from '../../styles/styles'
-import { ArrowLeft, ChatCenteredText, Image as IconImage,
-YoutubeLogo, Hash } from 'phosphor-react'
-import { FaGithub } from 'react-icons/fa'
-import { BsGlobe } from 'react-icons/bs'
+import * as S from "../../styles/project";
+import {
+  ButtonAlt,
+  ButtonSecondary,
+  Title,
+  Description,
+} from "../../styles/styles";
+import {
+  ArrowLeft,
+  ChatCenteredText,
+  Image as IconImage,
+  YoutubeLogo,
+  Hash,
+} from "phosphor-react";
+import { FaGithub } from "react-icons/fa";
+import { BsGlobe } from "react-icons/bs";
 
 interface ProjectProps {
-  project: Project
+  project: Project;
 }
 
-export default function Projeto({ project }: ProjectProps) {
+export default function ProjectPage({ project }: ProjectProps) {
   return (
     <>
       <Head>
-        <title>{project.title} | Evander Inácio </title>
+        <title>{project.title} | Evander Inácio</title>
         <meta name="description" content={project.description} />
         <meta property="og:title" content={project.title} />
         <meta property="og:description" content={project.description} />
@@ -52,14 +62,14 @@ export default function Projeto({ project }: ProjectProps) {
               <Link href={project.web}>
                 <a target="_blank">
                   <ButtonAlt>
-                    Projeto online <BsGlobe size={15} />
+                    Live Project <BsGlobe size={15} />
                   </ButtonAlt>
                 </a>
               </Link>
               <Link href={project.github}>
                 <a target="_blank">
                   <ButtonAlt>
-                    Repositório <FaGithub size={17} />
+                    Repository <FaGithub size={17} />
                   </ButtonAlt>
                 </a>
               </Link>
@@ -70,7 +80,7 @@ export default function Projeto({ project }: ProjectProps) {
         <S.DescriptionProject>
           <div className="description">
             <Title>
-              Descrição
+              Description
               <span>
                 <ChatCenteredText /> Description
               </span>
@@ -87,20 +97,20 @@ export default function Projeto({ project }: ProjectProps) {
             </span>
           </Title>
 
-          <Description style={{ textAlign: 'center' }}>
-            Tecnologias usadas no desenvolvimento do projeto.
+          <Description style={{ textAlign: "center" }}>
+            Technologies used in the project development.
           </Description>
 
           <S.TagsContainer>
             {project.tags &&
-              project.tags.map(tag => {
+              project.tags.map((tag) => {
                 return (
                   <S.TagsContent key={tag.id} color={tag.color}>
                     <div
                       className="card-icon"
                       style={{
                         backgroundColor: `rgba(${tag.rgb}, .1)`,
-                        border: `1px solid ${tag.color}`
+                        border: `1px solid ${tag.color}`,
                       }}
                     >
                       <Image
@@ -112,7 +122,7 @@ export default function Projeto({ project }: ProjectProps) {
                     </div>
                     <h3>{tag.name}</h3>
                   </S.TagsContent>
-                )
+                );
               })}
           </S.TagsContainer>
         </S.Tags>
@@ -127,15 +137,15 @@ export default function Projeto({ project }: ProjectProps) {
 
           <S.PrintContent>
             <S.Gif>
-              <h2>Detalhes</h2>
+              <h2>Details</h2>
               <p>
-                Nome: <span>{project.title}</span>
+                Name: <span>{project.title}</span>
               </p>
               <p>
                 Status: <span>{project.status}</span>
               </p>
               <p>
-                Ano: <span>{project.year}</span>
+                Year: <span>{project.year}</span>
               </p>
               <h5>Preview</h5>
               <video className="preview" loop autoPlay muted playsInline>
@@ -145,7 +155,7 @@ export default function Projeto({ project }: ProjectProps) {
 
             <S.Print>
               {project.print &&
-                project.print.map(print => {
+                project.print.map((print) => {
                   return (
                     <div className="print-list" key={print.id}>
                       <h3>{print.name}</h3>
@@ -157,7 +167,7 @@ export default function Projeto({ project }: ProjectProps) {
                         alt={print.name}
                       />
                     </div>
-                  )
+                  );
                 })}
             </S.Print>
           </S.PrintContent>
@@ -175,7 +185,7 @@ export default function Projeto({ project }: ProjectProps) {
             <img
               className="vector"
               src="/vectors/youtube.svg"
-              alt="logo do YouTube"
+              alt="YouTube logo"
             />
           </Title>
           <S.Video>
@@ -191,17 +201,17 @@ export default function Projeto({ project }: ProjectProps) {
         </S.ContainerVideo>
 
         <div className="allProjects">
-          <AllProjects title={'Veja outros projetos'} />
+          <AllProjects title={"See other projects"} />
         </div>
-        <Link href={'/#projects'}>
+        <Link href={"/#projects"}>
           <ButtonSecondary>
             <a>
               <ArrowLeft
-                style={{ marginBottom: '-0.2rem' }}
+                style={{ marginBottom: "-0.2rem" }}
                 weight="bold"
                 size={18}
-              />{' '}
-              Voltar
+              />{" "}
+              Back
             </a>
           </ButtonSecondary>
         </Link>
@@ -209,43 +219,27 @@ export default function Projeto({ project }: ProjectProps) {
 
       <Footer />
     </>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
-  const project = projects.map(project => ({
-    id: project.id,
-    link: project.url,
-    imgUrl: project.img,
-    banner: project.banner,
-    icon: project.icon,
-    title: project.title,
-    type: project.type,
-    github: project.github,
-    web: project.web,
-    description: project.description,
-    tags: project.tags,
-    print: project.print,
-    gif: project.gif,
-    year: project.year,
-    status: project.status,
-    video: project.video,
-    backgroundImage: project.backgroundImage
-  }))
-
-  const idProject = project.find(project => project.link === params.id)
+  const project = projects.find((project) => project.url === params.id);
 
   return {
     props: {
-      project: idProject
+      project,
     },
-    revalidate: 10
-  }
-}
+    revalidate: 10,
+  };
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = projects.map((project) => ({
+    params: { id: project.url },
+  }));
+
   return {
-    paths: [],
-    fallback: 'blocking'
-  }
-}
+    paths,
+    fallback: "blocking",
+  };
+};

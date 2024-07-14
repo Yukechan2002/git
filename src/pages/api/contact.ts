@@ -18,27 +18,27 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const messageData = {
       embeds: [
         {
-          title: 'Mensagem de Contato',
-          color:  0x00d9ff,
+          title: "Contact Message",
+          color: 0x00d9ff,
           fields: [
             {
-              name: 'Nome',
+              name: "Name",
               value: name,
               inline: true,
             },
             {
-              name: 'E-mail',
+              name: "E-mail",
               value: email,
               inline: true,
             },
             {
-              name: 'Mensagem',
-              value: message
-            }
+              name: "Message",
+              value: message,
+            },
           ],
-        }
-      ]
-    }
+        },
+      ],
+    };
 
     await axios.post(WEBHOOK_URL, messageData)
 
@@ -46,7 +46,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   } catch (error) {
     return res.json({
       error: true,
-      message: 'erro'
+      message: 'error'
     })
   }
 }

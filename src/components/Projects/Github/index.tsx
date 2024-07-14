@@ -1,22 +1,22 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { AllContainer, AllContent, Cubo } from './styles'
-import { ButtonAlt } from '../../../styles/styles'
-import { AiOutlineAppstore } from 'react-icons/ai'
+import Link from "next/link";
+import Image from "next/image";
+import { AllContainer, AllContent, Cubo } from "./styles";
+import { ButtonAlt } from "../../../styles/styles";
+import { AiOutlineAppstore } from "react-icons/ai";
 
-interface AllContent {
-  title: string
+interface AllContentProps {
+  title: string;
 }
 
-export function AllProjects({ title }: AllContent) {
+export function AllProjects({ title }: AllContentProps) {
   return (
     <>
       <AllContainer>
         <h4>{title}</h4>
         <AllContent>
-          <Link href={'/projects'}>
+          <Link href={"/projects"}>
             <ButtonAlt>
-              Projetos <AiOutlineAppstore size={20} />
+              Projects <AiOutlineAppstore size={20} />
             </ButtonAlt>
           </Link>
 
@@ -77,5 +77,5 @@ export function AllProjects({ title }: AllContent) {
         </AllContent>
       </AllContainer>
     </>
-  )
+  );
 }
