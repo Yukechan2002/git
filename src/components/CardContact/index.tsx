@@ -18,10 +18,10 @@ export function CardContact() {
         </div>
         <CardContactContent>
           <div className="description">
-            <h2>Let's talk!</h2>
+            <h2>Let&apos;s talk!</h2>
             <p>
               If you have any questions or would just like to say hello, get in
-              touch with me. I'll do my best to get back to you!
+              touch with me. I&apos;ll do my best to get back to you!
             </p>
           </div>
 
