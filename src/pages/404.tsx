@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { ArrowLeft } from "phosphor-react";
 import { ButtonAlt } from "../styles/styles";
+import Image from "next/image"; // Import Image from next/image
 
 const Styles404 = styled.div`
   display: flex;
@@ -72,7 +73,8 @@ export default function Error() {
       </Head>
 
       <Styles404>
-        <img src="/vectors/404.svg" alt="404" />
+        {/* Use Image component from next/image */}
+        <Image src="/vectors/404.svg" alt="404" width={480} height={500} />
 
         <Content>
           <span>Hey! Looks like you&apos;re lost :(</span>

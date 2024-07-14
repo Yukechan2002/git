@@ -42,9 +42,9 @@ export default function Experience() {
         </Title>
 
         <Description>
-          I'm passionate about creating interactive and functional interfaces,
-          always seeking to improve my skills and learn new technologies. I'm
-          open to new challenges and exciting projects.
+          I&apos;m passionate about creating interactive and functional
+          interfaces, always seeking to improve my skills and learn new
+          technologies. I&apos;m open to new challenges and exciting projects.
         </Description>
 
         <TabsContainer>

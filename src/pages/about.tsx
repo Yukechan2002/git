@@ -13,12 +13,13 @@ import { ScrollTop } from "../components/ScrollTop";
 import { Links } from "../components/Links";
 import { ButtonAlt, Section, Title } from "../styles/styles";
 import * as S from "../styles/about";
+import Image from "next/image"; // Import Image from next/image
 
 export default function About() {
   return (
     <>
       <Head>
-        <title>About | Yukesh Chandran </title>
+        <title>About | Yukesh Chandran</title>
         <meta
           name="description"
           content="My name is Yukesh Chandran, I'm a MERN stack developer."
@@ -45,10 +46,12 @@ export default function About() {
 
           <S.AboutContent>
             <S.AboutImage>
-              <img
+              <Image
                 className="AboutImg"
                 src="/IMG_1190.jpg"
                 alt="Profile image of Yukesh"
+                width={480}
+                height={500}
               />
 
               <div className="links">
@@ -63,9 +66,7 @@ export default function About() {
                       <BsLinkedin size={25} /> @yukesh-chandran
                     </a>
                   </Link>
-                  <Link
-                    href={"https://api.whatsapp.com/send?phone=9500698294"}
-                  >
+                  <Link href={"https://api.whatsapp.com/send?phone=9500698294"}>
                     <a target="_blank" aria-label="Link to WhatsApp">
                       <RiWhatsappFill size={25} /> +91 95006-98294
                     </a>
@@ -76,14 +77,16 @@ export default function About() {
                       target="_blank"
                       aria-label="Link to email"
                     >
-                      <GrMail size={25} /> @yukeshchandran002@gmail.com
+                      <GrMail size={25} /> yukeshchandran002@gmail.com
                     </a>
                   </Link>
                 </ul>
               </div>
 
               <S.AboutContact>
-                <h3>Let's chat, maybe create an awesome project together?</h3>
+                <h3>
+                  Let&apos;s chat, maybe create an awesome project together?
+                </h3>
                 <p>Send me a message! 😉</p>
                 <Link href={"/contact"}>
                   <a>
@@ -94,26 +97,27 @@ export default function About() {
             </S.AboutImage>
             <S.AboutDescription>
               <p>
-                My name is Yukesh Chandran , I'm a Full stack developer, passionate about designing and coding. My specialty is
-                creating user interfaces and functionalities for web
-                applications using MERN stack.
+                My name is Yukesh Chandran, I&apos;m a Full stack developer,
+                passionate about designing and coding. My specialty is creating
+                user interfaces and functionalities for web applications using
+                MERN stack.
               </p>
               <p>
                 I started my journey in university with the initial goal of
-                studying Systems Analysis and Development. I've always been
+                studying Systems Analysis and Development. I&apos;ve always been
                 interested in computers and curious about creating web pages.
                 So, I decided to combine these two passions and enrolled in
                 college to explore the possibilities in the IT field.
               </p>
-              
+
               <p>
                 The following year, in 2022, I realized I needed to set a clear
-                goal. That's when I directed my efforts to improve my skills in
-                HTML, CSS, and JavaScript, aiming to build web applications and
-                deepen my learning. That was the starting point for me to become
-                a web developer.
+                goal. That&apos;s when I directed my efforts to improve my
+                skills in HTML, CSS, and JavaScript, aiming to build web
+                applications and deepen my learning. That was the starting point
+                for me to become a web developer.
               </p>
-            
+
               <p>
                 I continue to study and develop personal projects to expand my
                 knowledge, focusing on the JavaScript ecosystem for front-end

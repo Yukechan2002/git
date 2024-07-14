@@ -1,32 +1,32 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import projects from '../data/projects'
-import { Header } from '../components/Header'
-import { Links } from '../components/Links'
-import { Footer } from '../components/Footer'
-import { ScrollTop } from '../components/ScrollTop'
-import * as S from '../styles/projects'
-import * as T from '../styles/styles'
-import { HiOutlineDesktopComputer } from 'react-icons/hi'
-import { FaSearch } from 'react-icons/fa'
-import { ArrowRight } from 'phosphor-react'
+import { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import projects from "../data/projects";
+import { Header } from "../components/Header";
+import { Links } from "../components/Links";
+import { Footer } from "../components/Footer";
+import { ScrollTop } from "../components/ScrollTop";
+import * as S from "../styles/projects";
+import * as T from "../styles/styles";
+import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { FaSearch } from "react-icons/fa";
+import { ArrowRight } from "phosphor-react";
 
 interface ProjectsProps {
-  target: HTMLInputElement
+  target: HTMLInputElement;
 }
 
 export default function Projects() {
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState("");
 
   const handleChange = (e: ProjectsProps) => {
-    setQuery(e.target.value)
-  }
+    setQuery(e.target.value);
+  };
 
-  const projectFilter = projects.filter(project =>
+  const projectFilter = projects.filter((project) =>
     project.title.toLowerCase().includes(query.toLowerCase())
-  )
+  );
 
   return (
     <>
@@ -55,8 +55,8 @@ export default function Projects() {
           </span>
         </T.Title>
         <T.Description>
-          Here you can view some of the projects I've developed. Feel free to
-          browse and explore the projects to see how they were built, the
+          Here you can view some of the projects I&apos;ve developed. Feel free
+          to browse and explore the projects to see how they were built, the
           technologies used, and the features implemented.
         </T.Description>
 
@@ -134,7 +134,7 @@ export default function Projects() {
             })}
 
             <p className="github">
-              Hey, I've got even more on{" "}
+              Hey, I&apos;ve got even more on{" "}
               <a
                 href="https://github.com/Yukechan2002"
                 target="_blank"
