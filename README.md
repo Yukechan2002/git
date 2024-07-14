@@ -10,7 +10,7 @@ My portfolio created with the objective of showcasing my projects.
 
 ## 🚀 Deploy
 
- [Yukesh Chandran](#)
+ [Yukesh Chandran](https://yukesh-chandran-portfolio.netlify.app/)
 
 ## 🔥 Technologies
 
